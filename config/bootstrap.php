@@ -217,5 +217,3 @@ if (Configure::read('debug')) {
 }
 
 // Chaves da API do Google
-Configure::write('Google.credentials.clientID', '1067593526870-u944r0qdpj63d8krm0egnvvkjt7je7b2.apps.googleusercontent.com');
-Configure::write('Google.credentials.secretKey', 'eDdcTsv6b_H9XXeGScWiATAw');
