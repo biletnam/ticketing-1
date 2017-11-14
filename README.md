@@ -14,5 +14,5 @@ A ticket playground system.
 ]
 ```
 ## Upcoming
-*. File Upload
-*. Login
+* File Upload
+* Login
