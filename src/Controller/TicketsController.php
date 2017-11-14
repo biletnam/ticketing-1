@@ -1,6 +1,7 @@
 <?php
     namespace App\Controller;
 
+    use Cake\Event\Event;
     use App\Controller\AppController;
     use Cake\Network\Exception\UnauthorizedException;
     use Cake\Network\Exception\NotAcceptableException;
@@ -15,7 +16,13 @@
             parent::initialize();
 
             $this->loadModel('Tickets');
+        }
+        public function beforeFilter(Event $event)
+        {
+            $this->Auth->allow();
 
+            if(!$this->Auth->user())
+                throw new UnauthorizedException('Entre no sistema');
         }
         // Exclui o ticket
         public function delete($cod)

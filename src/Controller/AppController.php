@@ -45,8 +45,14 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
-            'unauthorizedRedirect' => '/auth/login',
-            'logoutRedirect' => '/auth/login'
+            'unauthorizedRedirect' => [
+                'controller' => 'Auth',
+                'action' => 'login'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Auth',
+                'action' => 'login'
+            ]
         ]);
         $this->loadComponent('Cookie');
 
@@ -61,12 +67,6 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-        // Força o login -> Apenas para teste
-        // $this->Auth->deny();
-        //
-        // var_dump($this->Auth->user());
-        // exit();
-        $this->Auth->setUser($this->Users->get(1)->toArray());
     }
 
     /**

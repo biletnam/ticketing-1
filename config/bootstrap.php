@@ -216,4 +216,6 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
-// Chaves da API do Google
+// Google Credential keys
+Configure::write('Google.credentials.clientID', '{clientID}');
+Configure::write('Google.credentials.secretKey', '{secretKey}');
