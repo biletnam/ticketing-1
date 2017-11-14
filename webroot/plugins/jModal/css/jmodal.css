@@ -1,0 +1,83 @@
+.jModalBodyScroll{
+    overflow-y: hidden;
+}
+
+.jModalBack {
+    position: fixed;
+    background-image: url("../img/jmodal.png");
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    text-align: center;/*2.0*/
+
+    display: block;
+    z-index: 50;
+}
+
+.jModal {
+    position: relative;
+    background-color: #fff;
+
+    color: #999;
+    font-size: 16px;
+    text-align: left;/*2.0*/
+
+    border: 2px solid #2480C2;
+    border-radius: 8px;
+
+    display: inline-block;
+    margin: auto;
+}
+
+.jModal.expansive{
+    display: block;
+}
+
+.jModal.expansive .jContent{
+    display: inline-block;
+}
+
+.jModal .blob {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    border: none;
+
+    color: #2480C2;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+
+    display: block;
+    z-index: 1;
+}
+
+.jModal .btns{
+    background-color: #efefef;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+
+    text-align: center;
+
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 7px 7px;
+    display: block;
+}
+
+.jModal .btns input{
+    margin: 0 4px;
+}
+
+.jContent{
+    padding: 10px 25px;
+    display: block;
+}
